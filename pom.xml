@@ -5,6 +5,11 @@
     <groupId>org.js.autenticationclient</groupId>
     <artifactId>common-authentication</artifactId>
     <version>1.1-SNAPSHOT</version>
+    
+    <name>common-authentication</name>
+    <description>Common authentication client</description>
+    <url>http://github.com/jitendrasagoriya/common-authentication</url>
+
 
     <properties>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -17,6 +22,22 @@
     </properties>
     <!--
     -->
+    
+    <licenses>
+      <license>
+        <name>MIT License</name>
+        <url>http://www.opensource.org/licenses/mit-license.php</url>
+      </license>
+    </licenses>
+    
+    <developers>
+        <developer>
+          <name>Jitendra Sagoriya</name>
+          <email>jitendrasagoriya@yahoo.co.in</email>
+          <organization>Public</organization> 
+        </developer>
+    </developers>
+
     <scm>
         <connection>scm:git:git@github.com:jitendrasagoriya/common-authentication.git</connection>
         <developerConnection>scm:git:git@github.com:jitendrasagoriya/common-authentication.git</developerConnection>
@@ -26,6 +47,32 @@
 
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${version.plugin.source}</version>
+                <executions>
+                  <execution>
+                    <id>attach-source</id>
+                    <phase>compile</phase>
+                    <goals>
+                      <goal>jar-no-fork</goal>
+                    </goals>
+                  </execution>
+                </executions>
+            </plugin>
+             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${version.plugin.javadoc}</version>
+                <executions>
+                  <execution>
+                    <id>attach-javadocs</id>
+                    <goals>
+                      <goal>jar</goal>
+                    </goals>
+                  </execution>
+                </executions>
+              </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.0.0</version>
