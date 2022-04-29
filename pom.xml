@@ -4,7 +4,7 @@
 
     <groupId>io.github.jitendrasagoriya</groupId>
     <artifactId>common-authentication</artifactId>
-     <version>1.2.7-SNAPSHOT</version>
+     <version>1.2.7</version>
     
     <name>common-authentication</name>
     <description>Common authentication client</description>
@@ -42,7 +42,7 @@
         <connection>scm:git:git@github.com:jitendrasagoriya/common-authentication.git</connection>
         <developerConnection>scm:git:git@github.com:jitendrasagoriya/common-authentication.git</developerConnection>
         <url>https://github.com/jitendrasagoriya/common-authentication</url>
-        <tag>1.2.6</tag>
+        <tag>1.2.7</tag>
     </scm>
 
 	 
