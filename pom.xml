@@ -4,7 +4,7 @@
 
     <groupId>io.github.jitendrasagoriya</groupId>
     <artifactId>common-authentication</artifactId>
-     <version>1.2</version>
+     <version>1.2.4-SNAPSHOT</version>
     
     <name>common-authentication</name>
     <description>Common authentication client</description>
@@ -61,7 +61,7 @@
         <plugins>
 			
 			
-			<plugin>
+			<!--plugin>
 			  <groupId>org.sonatype.plugins</groupId>
 			  <artifactId>nexus-staging-maven-plugin</artifactId>
 			  <version>1.6.7</version>
@@ -71,7 +71,7 @@
 				<nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
 				<autoReleaseAfterClose>true</autoReleaseAfterClose>
 			  </configuration>
-			</plugin>
+			</plugin-->
             <plugin>
                 <artifactId>maven-source-plugin</artifactId>
                 <version>3.2.0</version>
@@ -109,6 +109,10 @@
                     <goals>
                       <goal>sign</goal>
                     </goals>
+					<configuration>
+					<keyname>0xA52F3B60</keyname>
+					<passphraseServerId>J1tendr@</passphraseServerId>
+				  </configuration>
                   </execution>
                 </executions>
               </plugin>
@@ -152,6 +156,12 @@
     </build>
 
     <dependencies>
+	
+	<dependency>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+			</dependency>
         <!-- https://mvnrepository.com/artifact/commons-httpclient/commons-httpclient -->
         <dependency>
             <groupId>commons-httpclient</groupId>
